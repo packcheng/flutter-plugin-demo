@@ -33,8 +33,20 @@ android {
     defaultConfig {
         minSdkVersion 16
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    // 连接蓝牙
+    // https://github.com/Jasonchenlijian/FastBle
+    implementation 'com.clj.fastble:FastBleLib:2.3.2'
+    implementation 'androidx.annotation:annotation:1.1.0'
+
+    compileOnly files('/Users/packcheng/Flutter/bin/cache/artifacts/engine/android-arm/flutter.jar')
 }
